@@ -43,6 +43,12 @@ class GoodsBrandAdmin(object):
         return context
 
 
+class GoodsImageAdmin(object):
+    list_display = ["goods", "image","add_time"]
+    list_filter = list_display
+    search_fields = ['goods', ]
+
+
 class BannerGoodsAdmin(object):
     list_display = ["goods", "image", "index"]
 
@@ -59,6 +65,7 @@ xadmin.site.register(Goods, GoodsAdmin)
 xadmin.site.register(GoodsCategory, GoodsCategoryAdmin)
 xadmin.site.register(Banner, BannerGoodsAdmin)
 xadmin.site.register(GoodsCategoryBrand, GoodsBrandAdmin)
+xadmin.site.register(GoodsImage, GoodsImageAdmin)
 
 xadmin.site.register(HotSearchWords, HotSearchAdmin)
 xadmin.site.register(IndexAd, IndexAdAdmin)

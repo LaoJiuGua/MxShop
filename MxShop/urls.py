@@ -17,7 +17,24 @@ from django.contrib import admin
 import xadmin
 from django.urls import path,include
 
+from rest_framework.documentation import include_docs_urls
+from rest_framework.authtoken import views
+
+from django.views.static import serve
+from rest_framework_jwt.views import obtain_jwt_token
+
+from MxShop.settings import MEDIA_ROOT
+
+
 urlpatterns = [
     path('adminx/', xadmin.site.urls),
+    path('api-auth/',include('rest_framework.urls')),
+    path('api-token-auth',views.obtain_auth_token),
+    path('login/',obtain_jwt_token),
     path('ueditor/', include('DjangoUeditor.urls')),
+    path('goods/', include('goods.urls')),
+    path('users/', include('users.urls')),
+    path('oper/', include('user_operation.urls')),
+    path('media/<path:path>',serve,{'document_root':MEDIA_ROOT}),
+    path('docs',include_docs_urls(title='仙剑奇侠传')),
 ]
