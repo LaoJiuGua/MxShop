@@ -26,7 +26,7 @@ class UserFavViewset(viewsets.GenericViewSet,mixins.ListModelMixin,mixins.Create
     authentication_classes = (JSONWebTokenAuthentication,SessionAuthentication)
 
     # 搜索的字段
-    lookup_field = 'good_id'
+    lookup_field = 'goods_id'
 
     def get_serializer_class(self):
         # 动态选择序列化
