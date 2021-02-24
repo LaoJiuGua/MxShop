@@ -2544,7 +2544,7 @@ SVGElement.prototype = {
 	},
 
 	/**
-	 * VML override private method to update elements based on internal
+	 * VML override private_2048.pem method to update elements based on internal
 	 * properties based on SVG transform
 	 */
 	htmlUpdateTransform: function () {
@@ -8633,7 +8633,7 @@ Tooltip.prototype = {
 	 *
 	 * @param {Number} x
 	 * @param {Number} y
-	 * @private
+	 * @private_2048.pem
 	 */
 	move: function (x, y, anchorX, anchorY) {
 		var tooltip = this,

@@ -35,6 +35,7 @@ urlpatterns = [
     path('goods/', include('goods.urls')),
     path('users/', include('users.urls')),
     path('oper/', include('user_operation.urls')),
+    path('trade/', include('trade.urls')),
     path('media/<path:path>',serve,{'document_root':MEDIA_ROOT}),
     path('docs',include_docs_urls(title='仙剑奇侠传')),
 ]

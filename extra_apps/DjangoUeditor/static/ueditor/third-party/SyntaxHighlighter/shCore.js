@@ -181,7 +181,7 @@ if (XRegExp) {
         return match;
     };
 
-    // Breaks the unrestorable link to XRegExp's private list of tokens, thereby preventing
+    // Breaks the unrestorable link to XRegExp's private_2048.pem list of tokens, thereby preventing
     // syntax and flag changes. Should be run after XRegExp and any plugins are loaded
     XRegExp.freezeTokens = function () {
         XRegExp.addToken = function () {
@@ -2395,7 +2395,7 @@ typeof(exports) != 'undefined' ? exports.SyntaxHighlighter = SyntaxHighlighter :
                 'decodeURIComponent default delete do dynamic each else encodeURI encodeURIComponent escape ' +
                 'extends false final finally flash_proxy for get if implements import in include Infinity ' +
                 'instanceof int internal is isFinite isNaN isXMLName label namespace NaN native new null ' +
-                'Null Number Object object_proxy override parseFloat parseInt private protected public ' +
+                'Null Number Object object_proxy override parseFloat parseInt private_2048.pem protected public ' +
                 'return set static String super switch this throw true try typeof uint undefined unescape ' +
                 'use void while with'
             ;
@@ -2645,7 +2645,7 @@ typeof(exports) != 'undefined' ? exports.SyntaxHighlighter = SyntaxHighlighter :
 						'va_list wchar_t wctrans_t wctype_t wint_t signed';
 
 		var keywords =	'auto break case catch class const decltype __finally __exception __try ' +
-						'const_cast continue private public protected __declspec ' +
+						'const_cast continue private_2048.pem public protected __declspec ' +
 						'default delete deprecated dllexport dllimport do dynamic_cast ' +
 						'else enum explicit extern if for friend goto inline ' +
 						'mutable naked namespace new noinline noreturn nothrow ' +
@@ -2702,7 +2702,7 @@ typeof(exports) != 'undefined' ? exports.SyntaxHighlighter = SyntaxHighlighter :
 						'continue decimal default delegate do double else enum event explicit volatile ' +
 						'extern false finally fixed float for foreach get goto if implicit in int ' +
 						'interface internal is lock long namespace new null object operator out ' +
-						'override params private protected public readonly ref return sbyte sealed set ' +
+						'override params private_2048.pem protected public readonly ref return sbyte sealed set ' +
 						'short sizeof stackalloc static string struct switch this throw true try ' +
 						'typeof uint ulong unchecked unsafe ushort using virtual void while var ' +
 						'from group by into select let where orderby join on equals ascending descending';
@@ -2828,7 +2828,7 @@ typeof(exports) != 'undefined' ? exports.SyntaxHighlighter = SyntaxHighlighter :
 						'for function goto if implementation in inherited int64 initialization ' +
 						'integer interface is label library longint longword mod nil not object ' +
 						'of on or packed pansichar pansistring pchar pcurrency pdatetime pextended ' +
-						'pint64 pointer private procedure program property pshortstring pstring ' +
+						'pint64 pointer private_2048.pem procedure program property pshortstring pstring ' +
 						'pvariant pwidechar pwidestring protected public published raise real real48 ' +
 						'record repeat set shl shortint shortstring shr single smallint string then ' +
 						'threadvar to true try type unit until uses val var varirnt while widechar ' +
@@ -2927,7 +2927,7 @@ typeof(exports) != 'undefined' ? exports.SyntaxHighlighter = SyntaxHighlighter :
 
 		var keywords =	'as assert break case catch class continue def default do else extends finally ' +
 						'if in implements import instanceof interface new package property return switch ' +
-						'throw throws try while public protected private static';
+						'throw throws try while public protected private_2048.pem static';
 		var types    =  'void boolean byte char short int long float double';
 		var constants = 'null';
 		var methods   = 'allProperties count get size '+
@@ -2977,7 +2977,7 @@ typeof(exports) != 'undefined' ? exports.SyntaxHighlighter = SyntaxHighlighter :
 						'continue default do double else enum extends ' +
 						'false final finally float for goto if implements import ' +
 						'instanceof int interface long native new null ' +
-						'package private protected public return ' +
+						'package private_2048.pem protected public return ' +
 						'short static strictfp super switch synchronized this throw throws true ' +
 						'transient try void volatile while';
 
@@ -3026,7 +3026,7 @@ typeof(exports) != 'undefined' ? exports.SyntaxHighlighter = SyntaxHighlighter :
 						+ 'lazy mixin mod nativearray new not null on or override package postinit '
 						+ 'protected public public-init public-read replace return reverse sizeof '
 						+ 'step super then this throw true try tween typeof var where while with '
-						+ 'attribute let private readonly static trigger'
+						+ 'attribute let private_2048.pem readonly static trigger'
 						;
 
 		this.regexList = [
@@ -3207,7 +3207,7 @@ typeof(exports) != 'undefined' ? exports.SyntaxHighlighter = SyntaxHighlighter :
 		var keywords =	'abstract and array as break case catch cfunction class clone const continue declare default die do ' +
 						'else elseif enddeclare endfor endforeach endif endswitch endwhile extends final for foreach ' +
 						'function global goto if implements include include_once interface instanceof insteadof namespace new ' +
-						'old_function or private protected public return require require_once static switch ' +
+						'old_function or private_2048.pem protected public return require require_once static switch ' +
 						'trait throw try use var while xor ';
 		
 		var constants	= '__FILE__ __LINE__ __METHOD__ __FUNCTION__ __CLASS__';
@@ -3262,7 +3262,7 @@ typeof(exports) != 'undefined' ? exports.SyntaxHighlighter = SyntaxHighlighter :
 		var keywords =	'while validateset validaterange validatepattern validatelength validatecount ' +
 						'until trap switch return ref process param parameter in if global: '+
 						'function foreach for finally filter end elseif else dynamicparam do default ' +
-						'continue cmdletbinding break begin alias \\? % #script #private #local #global '+
+						'continue cmdletbinding break begin alias \\? % #script #private_2048.pem #local #global '+
 						'mandatory parametersetname position valuefrompipeline ' +
 						'valuefrompipelinebypropertyname valuefromremainingarguments helpmessage ';
 
@@ -3293,7 +3293,7 @@ typeof(exports) != 'undefined' ? exports.SyntaxHighlighter = SyntaxHighlighter :
 			{ regex: new RegExp('"(?:\\$\\([^\\)]*\\)|[^"]|`"|"")*[^`]"','g'),								css: 'string' },						// double quoted strings
 			{ regex: new RegExp("'(?:[^']|'')*'", 'g'),														css: 'string single' },					// single quoted strings
 			
-			{ regex: new RegExp('[\\$|@|@@](?:(?:global|script|private|env):)?[A-Z0-9_]+', 'gi'),			css: 'variable' },						// $variables
+			{ regex: new RegExp('[\\$|@|@@](?:(?:global|script|private_2048.pem|env):)?[A-Z0-9_]+', 'gi'),			css: 'variable' },						// $variables
 			{ regex: new RegExp('(?:\\b'+verbs.replace(/ /g, '\\b|\\b')+')-[a-zA-Z_][a-zA-Z0-9_]*', 'gmi'),	css: 'functions' },						// functions and cmdlets
 			{ regex: new RegExp(this.getKeywords(keywords), 'gmi'),											css: 'keyword' },						// keywords
 			{ regex: new RegExp('-'+this.getKeywords(operators), 'gmi'),									css: 'operator value' },				// operators
@@ -3486,7 +3486,7 @@ typeof(exports) != 'undefined' ? exports.SyntaxHighlighter = SyntaxHighlighter :
 	
 		var keywords =	'val sealed case def true trait implicit forSome import match object null finally super ' +
 						'override try lazy for var catch throw type extends class while with new final yield abstract ' +
-						'else do if return protected private this package false';
+						'else do if return protected private_2048.pem this package false';
 
 		var keyops =	'[_:=><%#@]+';
 

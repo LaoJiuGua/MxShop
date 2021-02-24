@@ -3887,7 +3887,7 @@ function isEmptyDataObject( obj ) {
 	var name;
 	for ( name in obj ) {
 
-		// if the public data object is empty, the private is still empty
+		// if the public data object is empty, the private_2048.pem is still empty
 		if ( name === "data" && jQuery.isEmptyObject( obj[name] ) ) {
 			continue;
 		}
@@ -9377,7 +9377,7 @@ jQuery.fn.extend({
 				timers = jQuery.timers,
 				length = queue ? queue.length : 0;
 
-			// enable finishing flag on private data
+			// enable finishing flag on private_2048.pem data
 			data.finish = true;
 
 			// empty the queue first

@@ -260,7 +260,7 @@ vjs.CoreObject.create = function(){
  * @param  {Element|Object}   elem Element or object to bind listeners to
  * @param  {String}   type Type of event to bind to.
  * @param  {Function} fn   Event listener.
- * @private
+ * @private_2048.pem
  */
 vjs.on = function(elem, type, fn){
   var data = vjs.getData(elem);
@@ -313,7 +313,7 @@ vjs.on = function(elem, type, fn){
  * @param  {Element|Object}   elem Object to remove listeners from
  * @param  {String=}   type Type of listener to remove. Don't include to remove all events from element.
  * @param  {Function} fn   Specific listener to remove. Don't incldue to remove listeners for an event type.
- * @private
+ * @private_2048.pem
  */
 vjs.off = function(elem, type, fn) {
   // Don't want to add a cache object through getData if not needed
@@ -363,7 +363,7 @@ vjs.off = function(elem, type, fn) {
  * Clean up the listener cache and dispatchers
  * @param  {Element|Object} elem Element to clean up
  * @param  {String} type Type of event to clean up
- * @private
+ * @private_2048.pem
  */
 vjs.cleanUpEvents = function(elem, type) {
   var data = vjs.getData(elem);
@@ -403,7 +403,7 @@ vjs.cleanUpEvents = function(elem, type) {
  * Fix a native event to have standard property values
  * @param  {Object} event Event object to fix
  * @return {Object}
- * @private
+ * @private_2048.pem
  */
 vjs.fixEvent = function(event) {
 
@@ -506,7 +506,7 @@ vjs.fixEvent = function(event) {
  * Trigger an event for an element
  * @param  {Element|Object} elem  Element to trigger an event on
  * @param  {String} event Type of event to trigger
- * @private
+ * @private_2048.pem
  */
 vjs.trigger = function(elem, event) {
   // Fetches element data and a reference to the parent (for bubbling).
@@ -579,7 +579,7 @@ vjs.trigger = function(elem, event) {
  * @param  {Element|Object}   elem Element or object to
  * @param  {String}   type
  * @param  {Function} fn
- * @private
+ * @private_2048.pem
  */
 vjs.one = function(elem, type, fn) {
   var func = function(){
@@ -596,7 +596,7 @@ var hasOwnProp = Object.prototype.hasOwnProperty;
  * @param  {String=} tagName    Name of tag to be created.
  * @param  {Object=} properties Element properties to be applied.
  * @return {Element}
- * @private
+ * @private_2048.pem
  */
 vjs.createEl = function(tagName, properties){
   var el, propName;
@@ -629,7 +629,7 @@ vjs.createEl = function(tagName, properties){
  * Uppercase the first letter of a string
  * @param  {String} string String to be uppercased
  * @return {String}
- * @private
+ * @private_2048.pem
  */
 vjs.capitalize = function(string){
   return string.charAt(0).toUpperCase() + string.slice(1);
@@ -638,7 +638,7 @@ vjs.capitalize = function(string){
 /**
  * Object functions container
  * @type {Object}
- * @private
+ * @private_2048.pem
  */
 vjs.obj = {};
 
@@ -649,7 +649,7 @@ vjs.obj = {};
  *
  * @function
  * @param  {Object}   obj Object to use as prototype
- * @private
+ * @private_2048.pem
  */
  vjs.obj.create = Object.create || function(obj){
   //Create a new function called 'F' which is just an empty object.
@@ -669,7 +669,7 @@ vjs.obj = {};
  * @param  {Object}   obj Object of properties
  * @param  {Function} fn  Function to be called on each property.
  * @this {*}
- * @private
+ * @private_2048.pem
  */
 vjs.obj.each = function(obj, fn, context){
   for (var key in obj) {
@@ -684,7 +684,7 @@ vjs.obj.each = function(obj, fn, context){
  * @param  {Object} obj1
  * @param  {Object} obj2
  * @return {Object}
- * @private
+ * @private_2048.pem
  */
 vjs.obj.merge = function(obj1, obj2){
   if (!obj2) { return obj1; }
@@ -703,7 +703,7 @@ vjs.obj.merge = function(obj1, obj2){
  * @param  {Object} obj1 Object to override
  * @param  {Object} obj2 Overriding object
  * @return {Object}      New object. Obj1 and Obj2 will be untouched.
- * @private
+ * @private_2048.pem
  */
 vjs.obj.deepMerge = function(obj1, obj2){
   var key, val1, val2;
@@ -732,7 +732,7 @@ vjs.obj.deepMerge = function(obj1, obj2){
  * Make a copy of the supplied object
  * @param  {Object} obj Object to copy
  * @return {Object}     Copy of object
- * @private
+ * @private_2048.pem
  */
 vjs.obj.copy = function(obj){
   return vjs.obj.merge({}, obj);
@@ -742,7 +742,7 @@ vjs.obj.copy = function(obj){
  * Check if an object is plain, and not a dom node or any object sub-instance
  * @param  {Object} obj Object to check
  * @return {Boolean}     True if plain, false otherwise
- * @private
+ * @private_2048.pem
  */
 vjs.obj.isPlain = function(obj){
   return !!obj
@@ -758,7 +758,7 @@ vjs.obj.isPlain = function(obj){
  * @param  {Function} fn      The function to be bound to a scope
  * @param  {Number=}   uid     An optional unique ID for the function to be set
  * @return {Function}
- * @private
+ * @private_2048.pem
  */
 vjs.bind = function(context, fn, uid) {
   // Make sure the function has a unique ID
@@ -785,14 +785,14 @@ vjs.bind = function(context, fn, uid) {
  * Ex. Event listneres are stored here.
  * (also from jsninja.com, slightly modified and updated for closure compiler)
  * @type {Object}
- * @private
+ * @private_2048.pem
  */
 vjs.cache = {};
 
 /**
  * Unique ID for an element or function
  * @type {Number}
- * @private
+ * @private_2048.pem
  */
 vjs.guid = 1;
 
@@ -800,7 +800,7 @@ vjs.guid = 1;
  * Unique attribute name to store an element's guid in
  * @type {String}
  * @constant
- * @private
+ * @private_2048.pem
  */
 vjs.expando = 'vdata' + (new Date()).getTime();
 
@@ -808,7 +808,7 @@ vjs.expando = 'vdata' + (new Date()).getTime();
  * Returns the cache object where data for an element is stored
  * @param  {Element} el Element to store data for.
  * @return {Object}
- * @private
+ * @private_2048.pem
  */
 vjs.getData = function(el){
   var id = el[vjs.expando];
@@ -823,7 +823,7 @@ vjs.getData = function(el){
  * Returns the cache object where data for an element is stored
  * @param  {Element} el Element to store data for.
  * @return {Object}
- * @private
+ * @private_2048.pem
  */
 vjs.hasData = function(el){
   var id = el[vjs.expando];
@@ -833,7 +833,7 @@ vjs.hasData = function(el){
 /**
  * Delete data for the element from the cache and the guid attr from getElementById
  * @param  {Element} el Remove data for an element
- * @private
+ * @private_2048.pem
  */
 vjs.removeData = function(el){
   var id = el[vjs.expando];
@@ -861,7 +861,7 @@ vjs.removeData = function(el){
  * Check if an object is empty
  * @param  {Object}  obj The object to check for emptiness
  * @return {Boolean}
- * @private
+ * @private_2048.pem
  */
 vjs.isEmpty = function(obj) {
   for (var prop in obj) {
@@ -877,7 +877,7 @@ vjs.isEmpty = function(obj) {
  * Add a CSS class name to an element
  * @param {Element} element    Element to add class name to
  * @param {String} classToAdd Classname to add
- * @private
+ * @private_2048.pem
  */
 vjs.addClass = function(element, classToAdd){
   if ((' '+element.className+' ').indexOf(' '+classToAdd+' ') == -1) {
@@ -889,7 +889,7 @@ vjs.addClass = function(element, classToAdd){
  * Remove a CSS class name from an element
  * @param {Element} element    Element to remove from class name
  * @param {String} classToAdd Classname to remove
- * @private
+ * @private_2048.pem
  */
 vjs.removeClass = function(element, classToRemove){
   var classNames, i;
@@ -912,7 +912,7 @@ vjs.removeClass = function(element, classToRemove){
  * Element for testing browser HTML5 video capabilities
  * @type {Element}
  * @constant
- * @private
+ * @private_2048.pem
  */
 vjs.TEST_VID = vjs.createEl('video');
 
@@ -920,7 +920,7 @@ vjs.TEST_VID = vjs.createEl('video');
  * Useragent for browser testing.
  * @type {String}
  * @constant
- * @private
+ * @private_2048.pem
  */
 vjs.USER_AGENT = navigator.userAgent;
 
@@ -928,7 +928,7 @@ vjs.USER_AGENT = navigator.userAgent;
  * Device is an iPhone
  * @type {Boolean}
  * @constant
- * @private
+ * @private_2048.pem
  */
 vjs.IS_IPHONE = (/iPhone/i).test(vjs.USER_AGENT);
 vjs.IS_IPAD = (/iPad/i).test(vjs.USER_AGENT);
@@ -978,7 +978,7 @@ vjs.TOUCH_ENABLED = !!(('ontouchstart' in window) || window.DocumentTouch && doc
  * This will return true or false for boolean attributes.
  * @param  {Element} tag Element from which to get tag attributes
  * @return {Object}
- * @private
+ * @private_2048.pem
  */
 vjs.getAttributeValues = function(tag){
   var obj, knownBooleans, attrs, attrName, attrVal;
@@ -1019,7 +1019,7 @@ vjs.getAttributeValues = function(tag){
  * @param  {Element} el        Element to get style value for
  * @param  {String} strCssRule Style name
  * @return {String}            Style value
- * @private
+ * @private_2048.pem
  */
 vjs.getComputedDimension = function(el, strCssRule){
   var strValue = '';
@@ -1037,7 +1037,7 @@ vjs.getComputedDimension = function(el, strCssRule){
  * Insert an element as the first child node of another
  * @param  {Element} child   Element to insert
  * @param  {[type]} parent Element to insert child into
- * @private
+ * @private_2048.pem
  */
 vjs.insertFirst = function(child, parent){
   if (parent.firstChild) {
@@ -1050,7 +1050,7 @@ vjs.insertFirst = function(child, parent){
 /**
  * Object to hold browser support information
  * @type {Object}
- * @private
+ * @private_2048.pem
  */
 vjs.support = {};
 
@@ -1059,7 +1059,7 @@ vjs.support = {};
  * Also allows for CSS (jQuery) ID syntax. But nothing other than IDs.
  * @param  {String} id  Element ID
  * @return {Element}    Element with supplied ID
- * @private
+ * @private_2048.pem
  */
 vjs.el = function(id){
   if (id.indexOf('#') === 0) {
@@ -1076,7 +1076,7 @@ vjs.el = function(id){
  * @param  {Number} seconds Number of seconds to be turned into a string
  * @param  {Number} guide   Number (in seconds) to model the string after
  * @return {String}         Time formatted as H:MM:SS or M:SS
- * @private
+ * @private_2048.pem
  */
 vjs.formatTime = function(seconds, guide) {
   // Default to using seconds as guide
@@ -1119,7 +1119,7 @@ vjs.unblockTextSelection = function(){ document.onselectstart = function () { re
  * Trim whitespace from the ends of a string.
  * @param  {String} string String to trim
  * @return {String}        Trimmed string
- * @private
+ * @private_2048.pem
  */
 vjs.trim = function(str){
   return (str+'').replace(/^\s+|\s+$/g, '');
@@ -1130,7 +1130,7 @@ vjs.trim = function(str){
  * @param  {Number} num Number to round
  * @param  {Number} dec Number of decimal places to round to
  * @return {Number}     Rounded number
- * @private
+ * @private_2048.pem
  */
 vjs.round = function(num, dec) {
   if (!dec) { dec = 0; }
@@ -1145,7 +1145,7 @@ vjs.round = function(num, dec) {
  * @param  {Number} start Start time in seconds
  * @param  {Number} end   End time in seconds
  * @return {Object}       Fake TimeRange object
- * @private
+ * @private_2048.pem
  */
 vjs.createTimeRange = function(start, end){
   return {
@@ -1160,7 +1160,7 @@ vjs.createTimeRange = function(start, end){
  * @param  {String} url           URL of resource
  * @param  {Function=} onSuccess  Success callback
  * @param  {Function=} onError    Error callback
- * @private
+ * @private_2048.pem
  */
 vjs.get = function(url, onSuccess, onError){
   var local, request;
@@ -1206,7 +1206,7 @@ vjs.get = function(url, onSuccess, onError){
 
 /**
  * Add to local storage (may removeable)
- * @private
+ * @private_2048.pem
  */
 vjs.setLocalStorage = function(key, value){
   try {
@@ -1232,7 +1232,7 @@ vjs.setLocalStorage = function(key, value){
  * http://stackoverflow.com/questions/470832/getting-an-absolute-url-from-a-relative-one-ie6-issue
  * @param  {String} url URL to make absolute
  * @return {String}     Absolute URL
- * @private
+ * @private_2048.pem
  */
 vjs.getAbsoluteURL = function(url){
 
@@ -1395,7 +1395,7 @@ vjs.Component.prototype.dispose = function(){
  * Reference to main player instance
  *
  * @type {vjs.Player}
- * @private
+ * @private_2048.pem
  */
 vjs.Component.prototype.player_ = true;
 
@@ -1412,7 +1412,7 @@ vjs.Component.prototype.player = function(){
  * The component's options object
  *
  * @type {Object}
- * @private
+ * @private_2048.pem
  */
 vjs.Component.prototype.options_;
 
@@ -1467,7 +1467,7 @@ vjs.Component.prototype.options = function(obj){
  * The DOM element for the component
  *
  * @type {Element}
- * @private
+ * @private_2048.pem
  */
 vjs.Component.prototype.el_;
 
@@ -1498,7 +1498,7 @@ vjs.Component.prototype.el = function(){
  * directly in `el_`
  *
  * @type {Element}
- * @private
+ * @private_2048.pem
  */
 vjs.Component.prototype.contentEl_;
 
@@ -1516,7 +1516,7 @@ vjs.Component.prototype.contentEl = function(){
  * The ID for the component
  *
  * @type {String}
- * @private
+ * @private_2048.pem
  */
 vjs.Component.prototype.id_;
 
@@ -1535,7 +1535,7 @@ vjs.Component.prototype.id = function(){
  * The name for the component. Often used to reference the component.
  *
  * @type {String}
- * @private
+ * @private_2048.pem
  */
 vjs.Component.prototype.name_;
 
@@ -1554,7 +1554,7 @@ vjs.Component.prototype.name = function(){
  * Array of child components
  *
  * @type {Array}
- * @private
+ * @private_2048.pem
  */
 vjs.Component.prototype.children_;
 
@@ -1573,7 +1573,7 @@ vjs.Component.prototype.children = function(){
  * Object of child components by ID
  *
  * @type {Object}
- * @private
+ * @private_2048.pem
  */
 vjs.Component.prototype.childIndex_;
 
@@ -1590,7 +1590,7 @@ vjs.Component.prototype.getChildById = function(id){
  * Object of child components by name
  *
  * @type {Object}
- * @private
+ * @private_2048.pem
  */
 vjs.Component.prototype.childNameIndex_;
 
@@ -1835,7 +1835,7 @@ vjs.Component.prototype.trigger = function(type, event){
  * Is the component loaded
  * This can mean different things depending on the component.
  *
- * @private
+ * @private_2048.pem
  * @type {Boolean}
  */
 vjs.Component.prototype.isReady_;
@@ -1848,7 +1848,7 @@ vjs.Component.prototype.isReady_;
  * Specially used when waiting for the Flash player to asynchrnously load.
  *
  * @type {Boolean}
- * @private
+ * @private_2048.pem
  */
 vjs.Component.prototype.isReadyOnInitFinish_ = true;
 
@@ -1856,7 +1856,7 @@ vjs.Component.prototype.isReadyOnInitFinish_ = true;
  * List of ready listeners
  *
  * @type {Array}
- * @private
+ * @private_2048.pem
  */
 vjs.Component.prototype.readyQueue_;
 
@@ -1957,7 +1957,7 @@ vjs.Component.prototype.hide = function(){
  * To be used with fadeIn/fadeOut.
  *
  * @return {vjs.Component}
- * @private
+ * @private_2048.pem
  */
 vjs.Component.prototype.lockShowing = function(){
   this.addClass('vjs-lock-showing');
@@ -1969,7 +1969,7 @@ vjs.Component.prototype.lockShowing = function(){
  * To be used with fadeIn/fadeOut.
  *
  * @return {vjs.Component}
- * @private
+ * @private_2048.pem
  */
 vjs.Component.prototype.unlockShowing = function(){
   this.removeClass('vjs-lock-showing');
@@ -2039,7 +2039,7 @@ vjs.Component.prototype.dimensions = function(width, height){
  * @param  {Boolean=} skipListeners Skip resize event trigger
  * @return {vjs.Component} The component if a dimension was set
  * @return {Number|String} The dimension if nothing was set
- * @private
+ * @private_2048.pem
  */
 vjs.Component.prototype.dimension = function(widthOrHeight, num, skipListeners){
   if (num !== undefined) {
@@ -2107,7 +2107,7 @@ vjs.Component.prototype.onResize;
  * We're requireing them to be enabled because otherwise every component would
  * have this extra overhead unnecessarily, on mobile devices where extra
  * overhead is especially bad.
- * @private
+ * @private_2048.pem
  */
 vjs.Component.prototype.emitTapEvents = function(){
   var touchStart, touchTime, couldBeTap, noTap;
@@ -2443,7 +2443,7 @@ vjs.SliderHandle = vjs.Component.extend();
  * Default value of the slider
  *
  * @type {Number}
- * @private
+ * @private_2048.pem
  */
 vjs.SliderHandle.prototype.defaultValue = 0;
 
@@ -2580,7 +2580,7 @@ vjs.MenuButton = vjs.Button.extend({
 /**
  * Track the state of the menu button
  * @type {Boolean}
- * @private
+ * @private_2048.pem
  */
 vjs.MenuButton.prototype.buttonPressed_ = false;
 
@@ -2789,7 +2789,7 @@ vjs.Player = vjs.Component.extend({
  * All options should use string keys so they avoid
  * renaming by closure compiler
  * @type {Object}
- * @private
+ * @private_2048.pem
  */
 vjs.Player.prototype.options_ = vjs.options;
 
@@ -3207,7 +3207,7 @@ vjs.Player.prototype.onError = function(e) {
 
 /**
  * Object for cached values.
- * @private
+ * @private_2048.pem
  */
 vjs.Player.prototype.cache_;
 
@@ -3749,7 +3749,7 @@ vjs.Player.prototype.loop = function(value){
 /**
  * the url of the poster image source
  * @type {String}
- * @private
+ * @private_2048.pem
  */
 vjs.Player.prototype.poster_;
 
@@ -3779,7 +3779,7 @@ vjs.Player.prototype.poster = function(src){
 /**
  * Whether or not the controls are showing
  * @type {Boolean}
- * @private
+ * @private_2048.pem
  */
 vjs.Player.prototype.controls_;
 
@@ -3821,7 +3821,7 @@ vjs.Player.prototype.usingNativeControls_;
  *
  * @param  {Boolean} bool    True signals that native controls are on
  * @return {vjs.Player}      Returns the player
- * @private
+ * @private_2048.pem
  */
 vjs.Player.prototype.usingNativeControls = function(bool){
   if (bool !== undefined) {
@@ -3838,7 +3838,7 @@ vjs.Player.prototype.usingNativeControls = function(bool){
          * @event usingnativecontrols
          * @memberof vjs.Player
          * @instance
-         * @private
+         * @private_2048.pem
          */
         this.trigger('usingnativecontrols');
       } else {
@@ -3850,7 +3850,7 @@ vjs.Player.prototype.usingNativeControls = function(bool){
          * @event usingcustomcontrols
          * @memberof vjs.Player
          * @instance
-         * @private
+         * @private_2048.pem
          */
         this.trigger('usingcustomcontrols');
       }
@@ -4495,7 +4495,7 @@ vjs.SeekHandle = vjs.SliderHandle.extend();
  * The default value for the handle content, which may be read by screen readers
  *
  * @type {String}
- * @private
+ * @private_2048.pem
  */
 vjs.SeekHandle.prototype.defaultValue = '00:00';
 
@@ -5651,7 +5651,7 @@ var api = vjs.Flash.prototype,
 
 /**
  * @this {*}
- * @private
+ * @private_2048.pem
  */
 var createSetter = function(attr){
   var attrUpper = attr.charAt(0).toUpperCase() + attr.slice(1);
@@ -5660,7 +5660,7 @@ var createSetter = function(attr){
 
 /**
  * @this {*}
- * @private
+ * @private_2048.pem
  */
 var createGetter = function(attr){
   api[attr] = function(){ return this.el_.vjs_getProperty(attr); };
@@ -5943,7 +5943,7 @@ vjs.MediaLoader = vjs.Component.extend({
 /**
  * List of associated text tracks
  * @type {Array}
- * @private
+ * @private_2048.pem
  */
 vjs.Player.prototype.textTracks_;
 
@@ -5951,7 +5951,7 @@ vjs.Player.prototype.textTracks_;
  * Get an array of associated text tracks. captions, subtitles, chapters, descriptions
  * http://www.w3.org/html/wg/drafts/html/master/embedded-content-0.html#dom-media-texttracks
  * @return {Array}           Array of track objects
- * @private
+ * @private_2048.pem
  */
 vjs.Player.prototype.textTracks = function(){
   this.textTracks_ = this.textTracks_ || [];
@@ -5966,7 +5966,7 @@ vjs.Player.prototype.textTracks = function(){
  * @param {String=} label       Optional label
  * @param {String=} language    Optional language
  * @param {Object=} options     Additional track options, like src
- * @private
+ * @private_2048.pem
  */
 vjs.Player.prototype.addTextTrack = function(kind, label, language, options){
   var tracks = this.textTracks_ = this.textTracks_ || [];
@@ -6000,7 +6000,7 @@ vjs.Player.prototype.addTextTrack = function(kind, label, language, options){
  * Add an array of text tracks. captions, subtitles, chapters, descriptions
  * Track objects will be stored in the player.textTracks() array
  * @param {Array} trackList Array of track elements or objects (fake track elements)
- * @private
+ * @private_2048.pem
  */
 vjs.Player.prototype.addTextTracks = function(trackList){
   var trackObj;
@@ -6081,7 +6081,7 @@ vjs.TextTrack = vjs.Component.extend({
 
 /**
  * Track kind value. Captions, subtitles, etc.
- * @private
+ * @private_2048.pem
  */
 vjs.TextTrack.prototype.kind_;
 
@@ -6095,7 +6095,7 @@ vjs.TextTrack.prototype.kind = function(){
 
 /**
  * Track src value
- * @private
+ * @private_2048.pem
  */
 vjs.TextTrack.prototype.src_;
 
@@ -6110,7 +6110,7 @@ vjs.TextTrack.prototype.src = function(){
 /**
  * Track default value
  * If default is used, subtitles/captions to start showing
- * @private
+ * @private_2048.pem
  */
 vjs.TextTrack.prototype.dflt_;
 
@@ -6124,7 +6124,7 @@ vjs.TextTrack.prototype.dflt = function(){
 
 /**
  * Track title value
- * @private
+ * @private_2048.pem
  */
 vjs.TextTrack.prototype.title_;
 
@@ -6139,7 +6139,7 @@ vjs.TextTrack.prototype.title = function(){
 /**
  * Language - two letter string to represent track language, e.g. 'en' for English
  * Spec def: readonly attribute DOMString language;
- * @private
+ * @private_2048.pem
  */
 vjs.TextTrack.prototype.language_;
 
@@ -6154,7 +6154,7 @@ vjs.TextTrack.prototype.language = function(){
 /**
  * Track label e.g. 'English'
  * Spec def: readonly attribute DOMString label;
- * @private
+ * @private_2048.pem
  */
 vjs.TextTrack.prototype.label_;
 
@@ -6169,7 +6169,7 @@ vjs.TextTrack.prototype.label = function(){
 /**
  * All cues of the track. Cues have a startTime, endTime, text, and other properties.
  * Spec def: readonly attribute TextTrackCueList cues;
- * @private
+ * @private_2048.pem
  */
 vjs.TextTrack.prototype.cues_;
 
@@ -6184,7 +6184,7 @@ vjs.TextTrack.prototype.cues = function(){
 /**
  * ActiveCues is all cues that are currently showing
  * Spec def: readonly attribute TextTrackCueList activeCues;
- * @private
+ * @private_2048.pem
  */
 vjs.TextTrack.prototype.activeCues_;
 
@@ -6203,7 +6203,7 @@ vjs.TextTrack.prototype.activeCues = function(){
  * const unsigned short LOADED = 2;
  * const unsigned short ERROR = 3;
  * readonly attribute unsigned short readyState;
- * @private
+ * @private_2048.pem
  */
 vjs.TextTrack.prototype.readyState_;
 
@@ -6221,7 +6221,7 @@ vjs.TextTrack.prototype.readyState = function(){
  * const unsigned short HIDDEN = 1; (still triggering cuechange events, but not visible)
  * const unsigned short SHOWING = 2;
  * attribute unsigned short mode;
- * @private
+ * @private_2048.pem
  */
 vjs.TextTrack.prototype.mode_;
 
@@ -6971,7 +6971,7 @@ vjs.obj.merge(vjs.ControlBar.prototype.options_['children'], {
  * Only using for parse method when parsing data-setup attribute JSON.
  * @suppress {undefinedVars}
  * @namespace
- * @private
+ * @private_2048.pem
  */
 vjs.JSON;
 

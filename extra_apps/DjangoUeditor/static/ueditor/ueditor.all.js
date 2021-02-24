@@ -2331,7 +2331,7 @@ var domUtils = dom.domUtils = {
     /**
      * 检测节点node是否属是UEditor定义的bookmark节点
      * @method isBookmarkNode
-     * @private
+     * @private_2048.pem
      * @param { Node } node 需要检测的节点对象
      * @return { Boolean } 是否是bookmark节点
      * @example
@@ -3683,7 +3683,7 @@ var domUtils = dom.domUtils = {
     },
     /**
      * 删除_moz_dirty属性
-     * @private
+     * @private_2048.pem
      * @method removeDirtyAttr
      */
     removeDirtyAttr:function (node) {
@@ -3823,7 +3823,7 @@ var domUtils = dom.domUtils = {
     },
     /**
      * 判断给定的节点是否是一个“填充”节点
-     * @private
+     * @private_2048.pem
      * @method isFillChar
      * @param { Node } node 需要判断的节点
      * @param { Boolean } isInStart 是否从节点内容的开始位置匹配
@@ -3974,7 +3974,7 @@ var domUtils = dom.domUtils = {
     /**
      * 用“填充字符”填充节点
      * @method fillNode
-     * @private
+     * @private_2048.pem
      * @param { DomDocument } doc 填充的节点所在的docment对象
      * @param { Node } node 需要填充的节点对象
      * @example
@@ -4076,7 +4076,7 @@ var domUtils = dom.domUtils = {
     /**
      * 判断节点的标签上是否不存在任何属性
      * @method hasNoAttributes
-     * @private
+     * @private_2048.pem
      * @param { Node } node 需要检测的节点对象
      * @return { Boolean } 节点是否不包含任何属性
      * @example
@@ -4101,7 +4101,7 @@ var domUtils = dom.domUtils = {
     /**
      * 检测节点是否是UEditor所使用的辅助节点
      * @method isCustomeNode
-     * @private
+     * @private_2048.pem
      * @param { Node } node 需要检测的节点
      * @remind 辅助节点是指编辑器要完成工作临时添加的节点， 在输出的时候将会从编辑器内移除， 不会影响最终的结果。
      * @return { Boolean } 给定的节点是否是一个辅助节点
@@ -5826,7 +5826,7 @@ var fillCharReg = new RegExp(domUtils.fillChar, 'g');
 
         /**
          * 判断当前选区内容是否占位符
-         * @private
+         * @private_2048.pem
          * @method inFillChar
          * @return { Boolean } 如果是占位符返回true，否则返回false
          */
@@ -5843,7 +5843,7 @@ var fillCharReg = new RegExp(domUtils.fillChar, 'g');
         /**
          * 保存
          * @method createAddress
-         * @private
+         * @private_2048.pem
          * @return { Boolean } 返回开始和结束的位置
          * @example
          * ```html
@@ -5927,7 +5927,7 @@ var fillCharReg = new RegExp(domUtils.fillChar, 'g');
         /**
          * 保存
          * @method createAddress
-         * @private
+         * @private_2048.pem
          * @return { Boolean } 返回开始和结束的位置
          * @example
          * ```html
@@ -6515,7 +6515,7 @@ var fillCharReg = new RegExp(domUtils.fillChar, 'g');
 
     /**
      * 获取编辑器的html内容，赋值到编辑器所在表单的textarea文本域里面
-     * @private
+     * @private_2048.pem
      * @method setValue
      * @param { UE.Editor } editor 编辑器事例
      */
@@ -6939,7 +6939,7 @@ var fillCharReg = new RegExp(domUtils.fillChar, 'g');
         /**
          * 编辑器初始化
          * @method _setup
-         * @private
+         * @private_2048.pem
          * @param { Element } doc 编辑器Iframe中的文档对象
          */
         _setup: function (doc) {
@@ -7149,7 +7149,7 @@ var fillCharReg = new RegExp(domUtils.fillChar, 'g');
         /**
          * 对编辑器设置keydown事件监听，绑定快捷键和命令，当快捷键组合触发成功，会响应对应的命令
          * @method _bindshortcutKeys
-         * @private
+         * @private_2048.pem
          */
         _bindshortcutKeys: function () {
             var me = this, shortcutkeys = this.shortcutkeys;
@@ -7449,7 +7449,7 @@ var fillCharReg = new RegExp(domUtils.fillChar, 'g');
         /**
          * 初始化UE事件及部分事件代理
          * @method _initEvents
-         * @private
+         * @private_2048.pem
          */
         _initEvents: function () {
             var me = this,
@@ -7475,7 +7475,7 @@ var fillCharReg = new RegExp(domUtils.fillChar, 'g');
         /**
          * 触发事件代理
          * @method _proxyDomEvent
-         * @private
+         * @private_2048.pem
          * @return { * } fireEvent的返回值
          * @see UE.EventBase:fireEvent(String)
          */
@@ -7491,7 +7491,7 @@ var fillCharReg = new RegExp(domUtils.fillChar, 'g');
         /**
          * 变化选区
          * @method _selectionChange
-         * @private
+         * @private_2048.pem
          */
         _selectionChange: function (delay, evt) {
             var me = this;
@@ -7551,7 +7551,7 @@ var fillCharReg = new RegExp(domUtils.fillChar, 'g');
         /**
          * 执行编辑命令
          * @method _callCmdFn
-         * @private
+         * @private_2048.pem
          * @param { String } fnName 函数名称
          * @param { * } args 传给命令函数的参数
          * @return { * } 返回命令函数运行的返回值
@@ -7788,7 +7788,7 @@ var fillCharReg = new RegExp(domUtils.fillChar, 'g');
         /**
          * 设置默认内容
          * @method _setDefaultContent
-         * @private
+         * @private_2048.pem
          * @param  { String } cont 要存入的内容
          */
         _setDefaultContent: function () {

@@ -20,6 +20,10 @@ sys.path.insert(0,BASE_DIR)
 sys.path.insert(0,os.path.join(BASE_DIR, 'apps'))
 sys.path.insert(0,os.path.join(BASE_DIR, 'extra_apps'))
 
+
+private_key_path = os.path.join(BASE_DIR, 'apps/trade/key/alipay_private_2048.txt')
+ali_pub_key_path = os.path.join(BASE_DIR, 'apps/trade/key/alipay_public_2048.txt')
+
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/3.1/howto/deployment/checklist/
 
@@ -92,9 +96,21 @@ WSGI_APPLICATION = 'MxShop.wsgi.application'
 # https://docs.djangoproject.com/en/3.1/ref/settings/#databases
 
 DATABASES = {
+    # 'default': {
+    #     'ENGINE': 'django.db.backends.sqlite3',
+    #     'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+    # }
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'mxshop',        #数据库名字
+        'USER': 'root',          #账号
+        'PASSWORD': '123456',    #密码
+        'HOST': '127.0.0.1',     #IP
+        'PORT': '3306',          #端口
+        #这里引擎用innodb（默认myisam）
+        #因为后面第三方登录时，要求引擎为INNODB
+        # 'OPTIONS':{'init_command': 'SET storage_engine=INNODB'}, #这样设置会报错，改为
+        "OPTIONS":{"init_command":"SET default_storage_engine=INNODB;"}
     }
 }
 

@@ -39,7 +39,10 @@ class CategoryViewSet(mixins.ListModelMixin,mixins.RetrieveModelMixin,viewsets.G
 
 class GoodsListViewSet(mixins.ListModelMixin,mixins.RetrieveModelMixin,viewsets.GenericViewSet):
     """
-        商品列表
+        list:
+            商品列表,分頁，搜索，過濾，排序
+        retrieve:
+            获取商品详情
     """
     # 这里必须要定义一个默认的排序,否则会报错
     queryset = Goods.objects.all().order_by('id')

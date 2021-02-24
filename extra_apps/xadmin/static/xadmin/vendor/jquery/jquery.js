@@ -3250,8 +3250,8 @@ jQuery.support = (function( support ) {
 	1. Enforce API surface and semantic compatibility with 1.9.x branch
 	2. Improve the module's maintainability by reducing the storage
 		paths to a single mechanism.
-	3. Use the same single mechanism to support "private" and "user" data.
-	4. _Never_ expose "private" data to user code (TODO: Drop _data, _removeData)
+	3. Use the same single mechanism to support "private_2048.pem" and "user" data.
+	4. _Never_ expose "private_2048.pem" data to user code (TODO: Drop _data, _removeData)
 	5. Avoid exposing implementation details on user objects (eg. expando properties)
 	6. Provide a clear path for implementation upgrade to WeakMap in 2014
 */
@@ -5798,7 +5798,7 @@ jQuery.extend({
 					}
 				}
 			}
-			// Discard any remaining `private` and `user` data
+			// Discard any remaining `private_2048.pem` and `user` data
 			// One day we'll replace the dual arrays with a WeakMap and this won't be an issue.
 			// (Splices the data objects out of the internal cache arrays)
 			data_user.discard( elem );
@@ -5865,7 +5865,7 @@ function cloneCopyEvent( src, dest ) {
 		return;
 	}
 
-	// 1. Copy private data: events, handlers, etc.
+	// 1. Copy private_2048.pem data: events, handlers, etc.
 	if ( data_priv.hasData( src ) ) {
 		pdataOld = data_priv.access( src );
 		pdataCur = jQuery.extend( {}, pdataOld );
@@ -8342,7 +8342,7 @@ jQuery.fn.extend({
 				timers = jQuery.timers,
 				length = queue ? queue.length : 0;
 
-			// enable finishing flag on private data
+			// enable finishing flag on private_2048.pem data
 			data.finish = true;
 
 			// empty the queue first

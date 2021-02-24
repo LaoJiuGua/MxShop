@@ -571,7 +571,7 @@ baidu.flash._Base = (function(){
 
     /**
      * 创建一个随机的字符串
-     * @private
+     * @private_2048.pem
      * @return {String}
      */
     function _createString(){
@@ -580,7 +580,7 @@ baidu.flash._Base = (function(){
    
     /**
      * 检查flash状态
-     * @private
+     * @private_2048.pem
      * @param {Object} target flash对象
      * @return {Boolean}
      */
@@ -594,7 +594,7 @@ baidu.flash._Base = (function(){
 
     /**
      * 调用之前进行压栈的函数
-     * @private
+     * @private_2048.pem
      * @param {Array} callQueue 调用队列
      * @param {Object} target flash对象
      * @return {Null}
@@ -611,7 +611,7 @@ baidu.flash._Base = (function(){
 
     /**
      * 为传入的匿名函数创建函数名
-     * @private
+     * @private_2048.pem
      * @param {String|Function} fun 传入的匿名函数或者函数名
      * @return {String}
      */
@@ -632,7 +632,7 @@ baidu.flash._Base = (function(){
 
     /**
      * 绘制flash
-     * @private
+     * @private_2048.pem
      * @param {Object} options 创建参数
      * @return {Object} 
      */
@@ -722,7 +722,7 @@ baidu.flash._Base = (function(){
 
         /**
          * 检查flash是否ready， 并进行调用
-         * @private
+         * @private_2048.pem
          * @return {Null}
          */
         function _check(){
@@ -737,7 +737,7 @@ baidu.flash._Base = (function(){
 
         /**
          * 调用之前进行压栈的函数
-         * @private
+         * @private_2048.pem
          * @return {Null}
          */
         function _call(){
@@ -1335,7 +1335,7 @@ baidu.json.decode = baidu.json.parse;
 baidu.json.stringify = (function () {
     /**
      * 字符串处理时需要转义的字符表
-     * @private
+     * @private_2048.pem
      */
     var escapeMap = {
         "\b": '\\b',
@@ -1349,7 +1349,7 @@ baidu.json.stringify = (function () {
     
     /**
      * 字符串序列化
-     * @private
+     * @private_2048.pem
      */
     function encodeString(source) {
         if (/["\\\x00-\x1f]/.test(source)) {
@@ -1371,7 +1371,7 @@ baidu.json.stringify = (function () {
     
     /**
      * 数组序列化
-     * @private
+     * @private_2048.pem
      */
     function encodeArray(source) {
         var result = ["["], 
@@ -1400,7 +1400,7 @@ baidu.json.stringify = (function () {
     
     /**
      * 处理日期序列化时的补零
-     * @private
+     * @private_2048.pem
      */
     function pad(source) {
         return source < 10 ? '0' + source : source;
@@ -1408,7 +1408,7 @@ baidu.json.stringify = (function () {
     
     /**
      * 日期序列化
-     * @private
+     * @private_2048.pem
      */
     function encodeDate(source){
         return '"' + source.getFullYear() + "-" 
