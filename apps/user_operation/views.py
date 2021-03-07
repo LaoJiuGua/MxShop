@@ -41,7 +41,6 @@ class UserFavViewset(viewsets.GenericViewSet,mixins.ListModelMixin,mixins.Create
         # 只能查看当前登录用户的收藏，不会获取所有用户的收藏
         return UserFav.objects.filter(user=self.request.user)
 
-
 class LeavingMessageViewset(mixins.ListModelMixin,mixins.DestroyModelMixin,mixins.CreateModelMixin,viewsets.GenericViewSet):
     """
     list:
@@ -58,7 +57,6 @@ class LeavingMessageViewset(mixins.ListModelMixin,mixins.DestroyModelMixin,mixin
     # 只能看到自己的留言
     def get_queryset(self):
         return UserLeavingMessage.objects.filter(user=self.request.user)
-
 
 
 class AddressViewset(viewsets.ModelViewSet):

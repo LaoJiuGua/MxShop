@@ -38,6 +38,7 @@ class CategoryViewSet(mixins.ListModelMixin,mixins.RetrieveModelMixin,viewsets.G
     queryset = GoodsCategory.objects.filter(category_type=1)
     serializer_class = CategorySerializer
 
+
 class GoodsListViewSet(mixins.ListModelMixin,mixins.RetrieveModelMixin,viewsets.GenericViewSet):
     """
         list:
@@ -72,7 +73,6 @@ class GoodsListViewSet(mixins.ListModelMixin,mixins.RetrieveModelMixin,viewsets.
     #     goods = Goods.objects.all()
     #     goods_serializer = GoodsSerializer(goods,many=True)
     #     return Response(goods_serializer.data)
-
 
 
 class BannerViewset(mixins.ListModelMixin, viewsets.GenericViewSet):

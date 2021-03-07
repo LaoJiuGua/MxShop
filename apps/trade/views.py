@@ -1,6 +1,6 @@
 from datetime import datetime
 
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 
 # Create your views here.
 from rest_framework import viewsets
@@ -59,7 +59,7 @@ class OrderViewset(mixins.ListModelMixin,mixins.RetrieveModelMixin,mixins.Create
     """
     permission_classes = (IsAuthenticated,IsOwnerOrReadOnly)
     authentication_classes = (JSONWebTokenAuthentication,SessionAuthentication)
-    serializer_class = OrderSerializer
+    # serializer_class = OrderSerializer
 
     # 动态配置serializer
     def get_serializer_class(self):
@@ -104,21 +104,24 @@ class AlipayView(APIView):
         # 3. 生成ALipay对象
         alipay = AliPay(
             appid="2016102700769971",
-            app_notify_url=None,
+            # app_notify_url=None,
+            app_notify_url="http://127.0.0.1:8000/trade/return",
             app_private_key_path=private_key_path,
             alipay_public_key_path=ali_pub_key_path,  # 支付宝的公钥，验证支付宝回传消息使用，不是你自己的公钥,
             debug=True,  # 默认False,
-            return_url=None
+            # return_url=None
+            return_url="http://127.0.0.1:8000/trade/return"
         )
-
+        print(1)
         verify_re = alipay.verify(processed_dict, sign)
-
+        print(verify_re)
         # 这里可以不做操作。因为不管发不发return url。notify url都会修改订单状态。
         if verify_re is True:
             order_sn = processed_dict.get('out_trade_no', None)
             trade_no = processed_dict.get('trade_no', None)
-            trade_status = processed_dict.get('trade_status', None)
-
+            trade_status = processed_dict.get('trade_status', "TRADE_SUCCESS")
+            print(processed_dict)
+            print(trade_status)
             existed_orders = OrderInfo.objects.filter(order_sn=order_sn)
             for existed_order in existed_orders:
                 existed_order.pay_status = trade_status
@@ -126,8 +129,15 @@ class AlipayView(APIView):
                 existed_order.pay_time = datetime.now()
                 existed_order.save()
 
+            response = redirect("/index/#/app/home/member/order")
+            return response
 
-    def post(self, request):
+        else:
+            response = redirect("index")
+            return response
+
+
+def post(self, request):
         """
         处理支付宝的notify_url
         """
@@ -142,12 +152,15 @@ class AlipayView(APIView):
         #生成一个Alipay对象
         alipay = AliPay(
             appid="2016102700769971",
-            app_notify_url=None,
+            # app_notify_url=None,
+            app_notify_url="http://127.0.0.1:8000/trade/return",
             app_private_key_path=private_key_path,
             alipay_public_key_path=ali_pub_key_path,  # 支付宝的公钥，验证支付宝回传消息使用，不是你自己的公钥,
             debug=True,  # 默认False,
-            return_url=None
+            # return_url=None
+            return_url="http://127.0.0.1:8000/trade/return"
         )
+
 
         #进行验证
         verify_re = alipay.verify(processed_dict, sign)
@@ -160,12 +173,15 @@ class AlipayView(APIView):
             trade_no = processed_dict.get('trade_no', None)
             #交易状态
             trade_status = processed_dict.get('trade_status', None)
+            print(processed_dict)
+            print(trade_status)
 
             # 查询数据库中订单记录
             existed_orders = OrderInfo.objects.filter(order_sn=order_sn)
             for existed_order in existed_orders:
                 # 订单商品项
                 order_goods = existed_order.goods.all()
+                print(order_goods)
                 # 商品销量增加订单中数值
                 for order_good in order_goods:
                     goods = order_good.goods
